@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-im{
+            display: flex;
+            gap: 1.5rem;
+            color: #f5f5f5;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Fraunces', serif;
+        }
+        .text-im img{
+            max-width: 30%;
+        }
+        .main-decription h3{
+            text-align: center;
+            font-size: 8rem;
+            background: linear-gradient(
+                45deg,
+                #ffa95f 5%,
+                #f99c4a 15%,
+                #f47838 30%,
+                #e75157 45%,
+                #d92d7a 70%,
+                #cc2a92 90%,
+                #c32e92 95%
+            );
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            
+        }
+        .text-im img{
+            border-radius: 0;
+            max-width: 10%;
+        }
+        .text-im h2{
+            font-size: 7rem;
+            font-weight: 600;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            scroll-snap-type: mandatory;
+            scroll-padding: 25px;
+            column-gap: 20px;
+            padding: 37px;
+            overflow-y: hidden;
+        }
+
+        .avatar{
+            position: relative;
+            max-width: 80px;
+            max-height: 80px;
+            flex: 0 0 100%;
+            scroll-snap-align: start;border-radius: 20px;
+            color: #111;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 50%;
+            border: 3px solid #111;
+            text-align: center;
+            cursor: pointer;
+            transition: all .6s ease;
+            transform: 1s;
+        }
+
+        .avatar::before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 12px);
+            height: calc(100% + 12px);
+            background-image: linear-gradient(
+                45deg,
+                #ffa95f 5%,
+                #f99c4a 15%,
+                #f47838 30%,
+                #e75157 45%,
+                #d92d7a 70%,
+                #cc2a92 90%,
+                #c32e92 95%
+            );
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .avatar:first-child::after{
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: dodgerblue;
+            border: 2px solid #111;
+        }
+
+        .avatar:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .avatar h4{
+            font-weight: normal;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px){
+            .main-decription h3{
+                text-align: center;
+                font-size: 2rem !important;
+            }
+            .avatar{
+                max-width: 60px;
+                max-height: 60px;
+            }
+            .main{
+                padding: 37px;
+            }
+            .text-im img{
+            border-radius: 0;
+            max-width: 30%;
+        }
+        }
+    </style>
+
+    <div>
+        <div class="main-decription">
+            <div class="text-im">
+                <h2 class="">css</h2>
+                <img src="Instagram-Logo-PNG-Transparent.png" alt="">
+            </div>
+            <h3>Instagram Story</h3>
+        </div>
+        <main id="min" class="main">
+            <div class="avatar">
+                <img src="téléchargement.jfif" alt="">
+                <h4>Your story</h4>
+            </div>
+            <div class="avatar">
+                <img src="logo-Vue-JS-300x300.png" alt="">
+                <h4>David..</h4>
+            </div>
+            <div class="avatar">
+                <img src="responsive-design-adaptive-design-ux-design-responsive-websites-examples-ui-header.png" alt="">
+                <h4>jobs</h4>
+            </div>
+            <div class="avatar">
+                <img src="service-bg_1728x.webp" alt="">
+                <h4>Djamal</h4>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
